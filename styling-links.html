@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #welcome {
+        background-color: darkcyan;
+        height: 720px;
+        padding: 50px;
+        width: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      #How {
+        background-color: coral;
+        padding: 10px;
+      }
+      .mainnav {
+        font-size: 17px;
+        float: right;
+      }
+      .main-header {
+        background-color: bisque;
+        padding: 20px 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .main-nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .main-nav__item{
+        display: inline-block;
+        margin: 0px 10px;
+      }
+      .main-nav__item a{
+        text-decoration: none;
+      }
+      .main-header-logo{
+        color: chocolate;
+        font-weight: bold;
+        font-size: 21px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a style="text-decoration: none;" class="main-header-logo" href="#">Movie App</a>
+      <nav class="mainnav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="#">Home</a></li>
+          <li class="main-nav__item"><a href="#"> Movies</a></li>
+
+          <li class="main-nav__item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="welcome">
+      <h1>Welcome to MovieApp</h1>
+    </section>
+    <section id="How">
+      <h2>How It Works?</h2>
+    </section>
+  </body>
+</html>
