@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="buttons.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-header-ul {
+        list-style: none;
+        float: right;
+        color: #d61c4e;
+      }
+      .main-header-ul-li {
+        display: inline-block;
+        margin: 8px;
+        padding: 8px;
+        font-size: 24px;
+        color: red;
+      }
+      .main-header-ul-li a {
+        color: #d61c4e;
+      }
+      .alone-a {
+        margin: 10px;
+        display: inline-block;
+        padding: 20px;
+        font-size: 24px;
+        color: #d61c4e;
+      }
+      .main-header {
+        background-color: #293462;
+      }
+      .main-header-ul-li__login {
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #1cd6ce;
+      }
+      a:link {
+        color: #d61c4e;
+      }
+      a:visited {
+        color: #d61c4e;
+      }
+      a:hover {
+        color: white;
+      }
+      a:active {
+        color: #fedb39;
+      }
+      .photo {
+        background: url("https://www.wallpaperup.com/uploads/wallpapers/2019/06/01/1324799/397b600cb93cec2d0263e302a9b29ea2.jpg");
+        height: 400px;
+        position: relative;
+        background-position: center;
+        padding: 10px;
+        padding-left: 30px;
+        width: 100%;
+      }
+      .photo-write {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fedb39;
+        font-size: 36px;
+        transform: translate(-50%, -50%);
+      }
+      .row {
+        text-align: center;
+        background-color: #fedb39;
+        padding: 10px;
+      }
+      .col {
+        display: inline-block;
+        width: 30%;
+        margin: 9px;
+        padding: 12px;
+        text-align: center;
+      }
+      .row h1 {
+        color: #3e4555;
+        font-size: 32px;
+      }
+      .col h3 {
+        color: #3e4555;
+        font-size: 28px;
+      }
+      .row p {
+        font-size: 22px;
+      }
+
+      /* Bottom side */
+      .col-bottom {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 450px;
+        background-color: #1cd6ce;
+        vertical-align: top;
+      }
+      .col-left {
+        background: url("features.jpeg");
+
+        background-size: cover;
+      }
+      .col-right {
+        background-color: #edf5e7;
+        padding: 40px;
+        vertical-align: top;
+      }
+      .col-right h2 {
+        font-size: 32px;
+      }
+      .col-right p {
+        font-size: 26px;
+      }
+      .bottom-row a {
+        font-size: 32px;
+        border-radius: 8px;
+        vertical-align: bottom;
+        text-align: left;
+        margin-top: 35px;
+        display: inline-block;
+      }
+      .bottom-side a:hover {
+        background-color: #d61c4e;
+      }
+
+      .plan {
+        width: 33.3%;
+        padding: 5px;
+        float: left;
+      }
+      .plan_badge {
+        background-color: #ffff;
+        color: #293462;
+        padding: 8px;
+        border-radius: 6px;
+      }
+      .recommended_plan {
+        color: white;
+        background-color: #d61c4e !important;
+        position: relative;
+        top: -20px;
+      }
+
+      .plans__features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .plans__features li {
+        padding: 5px 0px;
+        margin: 5px;
+      }
+      .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .container {
+        margin: 0px auto;
+        width: 1000px;
+        text-align: center;
+      }
+      .innerplan {
+        background-color: #edf5e7;
+        padding: 15px 10px;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        transition: box-shadow 0.4s;
+      }
+      .innerplan:hover {
+        box-shadow: rgba(50, 50, 93, 0.55) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.59) 0px 18px 36px -18px inset;
+      }
+      .row-bottom {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div>
+        <a class="alone-a" href="GENEL-TEKRAR1.HTML">Movie App</a>
+        <ul class="main-header-ul">
+          <li class="main-header-ul-li">
+            <a
+              href="Milyonlarca Müzik Podcast ve Keşfedilecek Sanatçılar Burada. Şimdi Keşfedin _ Spotify.com.html"
+            >
+              &#8277;Filmler</a
+            >
+          </li>
+          <li class="main-header-ul-li">
+            <a href="deneme.html"> &#8277;Diziler</a>
+          </li>
+          <li class="main-header-ul-li main-header-ul-li__login">
+            <a href="css-uygulama1.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="photo">
+        <h1 class="photo-write">Welcome To Movie App</h1>
+      </section>
+      <section class="howitworks">
+        <div class="row">
+          <h1>How it Works?</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="fa-solid fa-registered fa-3x"></i>
+            <h3>Register</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+              ab magni sequi totam dolorum sapiente.
+            </p>
+          </div>
+          <div class="col">
+            <i class="fa-brands fa-buffer fa-3x"></i>
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius id
+              natus voluptatum eveniet, optio quae.
+            </p>
+          </div>
+          <div class="col">
+            <i class="fa-regular fa-face-smile fa-3x"></i>
+            <h3>Enjoy The Movies</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ab
+              sint hic odit cupiditate blanditiis!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bottom-side">
+        <div class="bottom-row clear">
+          <div class="col-bottom col-left"></div>
+          <div class="col-bottom col-right">
+            <h2>Watch all The Movies & TV Shows once they get released!</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+              nisi sed eum sit quisquam! Iusto hic quibusdam vel.
+            </p>
+            <button
+              style="font-size: 25px; vertical-align: bottom"
+              class="btn btn-primary"
+            >
+              Features
+            </button>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section class="plans">
+        <div class="row-bottom">
+          <h1 style="text-align: center">Become a Premium Member</h1>
+          <div class="container clear">
+            <div class="plan">
+              <div class="innerplan">
+                <h2>Free</h2>
+                <h3>0/month</h3>
+                <ul class="plans__features">
+                  <li>HD available</li>
+                  <li>Unlimited Movies and TV shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Download and watch offline</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                </ul>
+                <div>
+                  <button class="btn btn-primary">Choose Plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan plan-r">
+              <div class="innerplan recommended_plan">
+                <h2 class="plan_badge">Recommended</h2>
+                <h2>Basic</h2>
+                <h3>$9.99/month</h3>
+                <ul class="plans__features">
+                  <li>HD available</li>
+                  <li>Unlimited Movies and TV shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Download and watch offline</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                </ul>
+                <div>
+                  <button class="btn btn-outline-primary">Choose Plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div class="innerplan">
+                <h2>Premium</h2>
+                <h3>$19.99/month</h3>
+                <ul class="plans__features">
+                  <li>HD available</li>
+                  <li>Unlimited Movies and TV shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Download and watch offline</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                </ul>
+                <div>
+                  <button class="btn btn-primary">Choose Plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
