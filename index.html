@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="buttons.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif, Courier, monospace;
+      }
+      .clear {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      body {
+        margin: 0;
+        background-color: #ef5b0c;
+      }
+
+      .main-nav-ul {
+        list-style: none;
+        float: right;
+        margin-right: 18px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .main-nav-ul li {
+        display: inline-block;
+        margin-left: 18px;
+        margin-right: 18px;
+        padding-bottom: 10px;
+        font-size: larger;
+      }
+      /* header {
+        background-color: #fef9a7;
+        z-index: -10;
+      } */
+
+      .header-div {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px;
+        background-color: #000000c7;
+        color: white;
+        z-index: 999;
+        opacity: 0.8;
+        overflow: hidden;
+        position: fixed;
+      }
+      .banner {
+        font-size: 35px;
+        padding-left: 100px;
+        padding-top: 18px;
+        float: left;
+        width: 15%;
+        color: white;
+      }
+      .main-nav-ul a:hover {
+        color: #ef5b0c;
+        transition-duration: 0.4s;
+      }
+      .main-nav-ul a:active {
+        color: #fac213;
+      }
+      .main-nav-ul a:link {
+        color: white;
+      }
+      a:visited {
+        color: white;
+      }
+      .main-div1 {
+        position: absolute;
+        top: 300px;
+        left: 200px;
+      }
+      .header {
+        background-color: white;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size:  cover ;
+        width: 100%;
+        background-image: url("Interstellar-Kids-1536x960.jpg");
+        background-position: bottom;
+        margin: 0;
+        position: relative;
+      }
+      /* Products part*/
+      #About {
+        background-color: white;
+        padding-bottom: 50px;
+      }
+      .products {
+        text-align: center;
+      }
+      .products p {
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+        font-weight: 500;
+      }
+      .products h2 {
+        color: #ff5a27;
+        margin-top: 0;
+        font-weight: 600;
+        font-size: 32px;
+        padding-top: 100px;
+      }
+      .outside {
+        float: left;
+        width: 33%;
+
+        padding: 5px;
+      }
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+      }
+      .inside {
+        padding: 15px 10px;
+        border: 5px solid beige;
+        padding-left: 10px;
+        border-radius: 15px;
+      }
+      .products-1 {
+        margin: 0 auto;
+        max-width: 1500px;
+        margin-top: 35px;
+      }
+      /* Services part */
+      .col {
+        float: left;
+        width: 33%;
+        text-align: center;
+        padding: 35px;
+      }
+      .row {
+        margin: 0 auto;
+        max-width: 1700px;
+        margin-top: 30px;
+      }
+      .services-header {
+        text-align: center;
+        font-size: larger;
+        padding-top: 50px;
+      }
+      .services-header h2 {
+        font-size: 34px;
+      }
+      .services-header p {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      #services {
+        background-color: #ef5b0c;
+        padding-bottom: 50px;
+      }
+      #services p {
+        color: white;
+      }
+      #services h2 {
+        color: #100f0f;
+        text-decoration: wavy;
+        font-weight: 500;
+        padding-top: 20px;
+      }
+      /* Package Part */
+      #package {
+        background-color: white;
+        padding-bottom: 50px;
+      }
+      .row-package {
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .col-package {
+        width: 48%;
+        float: left;
+        padding: 15px;
+        border: 1px solid wheat;
+        margin: 3px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .row-package p {
+        display: inline-flex;
+        color: #000000c7;
+      }
+      .row-package h2 {
+        font-weight: 500;
+      }
+      .price {
+        font-size: 32px;
+        padding: 15px;
+        background-color: #ef5b0c;
+        border-radius: 40px;
+      }
+      .package-header {
+        text-align: center;
+        padding-top: 80px;
+      }
+      .package-header p {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      .package-header-h2 {
+        color: #ff5a27;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 50px;
+      }
+      /* Gallery Part */
+      .gallery-img {
+        width: calc(25% - 0px);
+        float: left;
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+      }
+      .main-img {
+        margin: 0 auto;
+        max-width: 1300px;
+        padding: 0px;
+        background-color: white;
+      }
+      .gallery-img img {
+        margin: 0;
+        padding: 0;
+
+        opacity: 0.8;
+        background-size: contain;
+      }
+      .gallery-header {
+        text-align: center;
+        padding-top: 80px;
+      }
+      .gallery-header p {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      .gallery-header h2 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 50px;
+        padding-top: 100px;
+      }
+      .gallery-img img:hover {
+        opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      /* Our Team Part */
+      .our-team-header {
+        text-align: center;
+        padding-top: 80px;
+      }
+      .our-team-header p {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      .our-team-header h2 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 50px;
+        padding-top: 50px;
+      }
+      .our-team-main-boxes p {
+        color: white;
+      }
+      .our-team-main-boxes h3 {
+        color: white;
+      }
+      .our-team-main-boxes img {
+        border-radius: 15px;
+        object-fit: cover;
+        height: 300px;
+      }
+
+      .our-team-main {
+        margin: 0 auto;
+        max-width: 1300px;
+      }
+      .our-team-main-boxes {
+        padding-left: 30px;
+      }
+
+      .box-container {
+        float: left;
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+      }
+      .accounts {
+        list-style: none;
+        float: left;
+        position: relative;
+        left: 35px;
+      }
+      .accounts li {
+        display: inline-block;
+        border: 1px solid #000;
+        padding: 10px;
+        color: #000;
+      }
+      .fa-xl {
+        font-size: 17px;
+      }
+      .accounts li:hover {
+        background-color: turquoise;
+        transition-duration: 0.5s;
+        color: white;
+      }
+      /* Contact Part */
+      #Contact {
+        background-color: white;
+        
+      }
+      .contact-header {
+        text-align: center;
+        padding-top: 80px;
+      }
+      .contact-header p {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      .contact-header h2 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 50px;
+        padding-top: 50px;
+      }
+      
+      .main-contact input {
+        padding: 25px 50px;
+        margin-bottom: 15px;
+        position: relative;
+        width: 50%;
+        left: 25%;
+      }
+      .main-contact textarea {
+        padding: 25px 50px;
+        margin-bottom: 15px;
+        position: relative;
+        width: 50%;
+        left: 25%;
+      }
+      .contact-button {
+        font-size: 19px;
+        position: relative;
+        left: 47%;
+        margin: 30px 0px;
+        padding: 15px 30px 15px 30px;
+        background-color: black;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: 600;
+      }
+      .contact-button:hover{
+        color: #000;
+        background-color: white;
+        transition-duration: .3s;
+      }
+      map{
+        margin: 0 30px;
+      }
+      footer{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sec" class="header">
+      <header>
+        <div class="header-div">
+          <a class="banner" href="#">LANCER</a>
+          <nav class="navigation">
+            <ul class="main-nav-ul">
+              <li>
+                <a href="#sec">
+                  <i id="fonts" class="fa-solid fa-house"></i> HOME</a
+                >
+              </li>
+              <li><a href="#About">ABOUT</a></li>
+              <li><a href="#services">SERVİCES</a></li>
+              <li><a href="#package">PACKAGE</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#our-team">OUR TEAM</a></li>
+              <li><a href="#Contact">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="clear"></div>
+        </div>
+
+        <div class="main-div1">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p style="max-width: 500px">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            excepturi adipisci sed culpa nostrum doloribus aperiam a eveniet
+            vitae laboriosam!
+          </p>
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </header>
+    </section>
+    <section id="About">
+      <div class="products">
+        <h2>Our Products</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nulla
+          molestias saepe quisquam. Eveniet itaque animi, repudiandae adipisci
+          soluta iusto recusandae commodi enim. Obcaecati, ipsum?Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Asperiores magnam
+          delectus, fuga sit ab, illo sequi eligendi quidem, nostrum magni nihil
+          aperiam unde quos possimus.
+        </p>
+      </div>
+      <div class="products-1">
+        <div class="outside">
+          <div class="inside">
+            <img src="features.jpeg" alt="" />
+            <div>
+              <h2>Social Media</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ad doloremque commodi veritatis! Commodi, sit.
+            </div>
+          </div>
+        </div>
+        <div class="outside">
+          <div class="inside">
+            <img src="features.jpeg" alt="" />
+            <div>
+              <h2>Social Media</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ad doloremque commodi veritatis! Commodi, sit.
+            </div>
+          </div>
+        </div>
+        <div class="outside">
+          <div class="inside">
+            <img src="features.jpeg" alt="" />
+            <div>
+              <h2>Social Media</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              ad doloremque commodi veritatis! Commodi, sit.
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+
+      <div class="clear"></div>
+    </section>
+    <section id="services">
+      <div class="services-header">
+        <h2>Our Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, a
+          similique blanditiis repudiandae illo accusantium placeat ducimus et
+          atque ex?
+        </p>
+      </div>
+      <div class="row">
+        <div class="col">
+          <i class="fa-solid fa-book-open fa-2xl"></i>
+          <h2>User research</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-lightbulb fa-2xl"></i>
+          <h2>Ideas</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-pencil fa-2xl"></i>
+          <h2>Design</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-database fa-2xl"></i>
+          <h2>Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-check-double fa-2xl"></i>
+          <h2>Quality</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+        <div class="col">
+          <i class="fa-solid fa-award fa-2xl"></i>
+          <h2>Product</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
+            libero scelerisque ligula sagittis faucibus eget quis lacus.
+          </p>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+    </section>
+    <section id="package">
+      <div class="package-header">
+        <h2 class="package-header-h2">Package</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam
+          eos nisi perspiciatis, modi consequatur dolorem. Totam nostrum non,
+          iusto sit aliquid a quod.
+        </p>
+      </div>
+      <div class="row-package">
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
+            eveniet necessitatibus debitis facilis praesentium atque aliquam
+            deserunt maxime. Neque, odio.
+            <span class="price">$45</span>
+          </p>
+        </div>
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum enim
+            eligendi consequuntur animi ut obcaecati reprehenderit similique
+            quis autem illo.<span class="price">$34</span>
+          </p>
+        </div>
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum enim
+            eligendi consequuntur animi ut obcaecati reprehenderit similique
+            quis autem illo.<span class="price">$68</span>
+          </p>
+        </div>
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum enim
+            eligendi consequuntur animi ut obcaecati reprehenderit similique
+            quis autem illo.<span class="price">$85</span>
+          </p>
+        </div>
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum enim
+            eligendi consequuntur animi ut obcaecati reprehenderit similique
+            quis autem illo.<span class="price">$72</span>
+          </p>
+        </div>
+        <div class="col-package">
+          <h2>Lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum enim
+            eligendi consequuntur animi ut obcaecati reprehenderit similique
+            quis autem illo.<span class="price">$19</span>
+          </p>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+    </section>
+    <section id="gallery">
+      <class class="gallery-header">
+        <h2>Gallery</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a
+          doloremque explicabo quisquam, eum ipsam commodi? Odio repellat saepe
+          nostrum?
+        </p>
+      </class>
+      <div class="main-img">
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="gallery-img">
+          <img src="Interstellar-Kids-1536x960.jpg" alt="" />
+        </div>
+        <div class="clear"></div>
+      </div>
+    </section>
+    <section id="our-team">
+      <div class="our-team-header">
+        <h2>Our Team</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+          similique laborum amet quae voluptatibus error.
+        </p>
+      </div>
+      <div class="our-team-main">
+        <div class="box-container">
+          <div class="our-team-main-boxes">
+            <img src="EUfM9iwWkAIu7Qy.jpg" alt="" />
+            <h3>Ted Mosby</h3>
+            <h5>Founder</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores?
+            </p>
+            <ul class="accounts">
+              <a href="">
+                <li><i class="fa-brands fa-facebook fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-twitter fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-google-plus-g fa-xl"></i></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+        <div class="box-container">
+          <div class="our-team-main-boxes">
+            <img src="unnamed.jpg" alt="" />
+            <h3>Marshall Eriksen</h3>
+            <h5>Founder</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores?
+            </p>
+            <ul class="accounts">
+              <a href="">
+                <li><i class="fa-brands fa-facebook fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-twitter fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-google-plus-g fa-xl"></i></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+        <div class="box-container">
+          <div class="our-team-main-boxes">
+            <img src="775-1532336916.jpg" alt="" />
+            <h3>Barney Stinson</h3>
+            <h5>Founder</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores?
+            </p>
+            <ul class="accounts">
+              <a href="">
+                <li><i class="fa-brands fa-facebook fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-twitter fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-google-plus-g fa-xl"></i></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+        <div class="box-container">
+          <div class="our-team-main-boxes">
+            <img src="1cba0c378061afaacf1df98957c53341.jpg" alt="" />
+            <h3>Robin Scherbatsky</h3>
+            <h5>Founder</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores?
+            </p>
+            <ul class="accounts">
+              <a href="">
+                <li><i class="fa-brands fa-facebook fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-twitter fa-xl"></i></li
+              ></a>
+              <a href=""
+                ><li><i class="fa-brands fa-google-plus-g fa-xl"></i></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="clear"></div>
+    </section>
+    <section id="Contact">
+      <div class="contact-header">
+        <h2>Contact Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo debitis
+          ullam sed dolores iusto nostrum! Beatae, earum nisi illum adipisci
+          debitis qui illo modi? Nostrum non illo ipsa! Dolor blanditiis ad
+          expedita fugiat debitis maxime eum voluptatum obcaecati numquam,
+          repellendus at ut saepe atque dicta illo molestiae repellat, autem
+          corrupti?
+        </p>
+      </div>
+      <form action="contact-informations">
+        <div class="main-contact">
+          <input type="text" placeholder="Your Name..." />
+          <input type="email" placeholder="Email Adress......" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+          ></textarea>
+        </div>
+        <button class="contact-button">SEND</button>
+      </form>
+     
+    </section>
+    <footer>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10611.808288792903!2d29.11222705448801!3d37.745267789854196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c64cd2bfffffff%3A0x7c21102ab89254ac!2sPamukkale%20University!5e0!3m2!1sen!2str!4v1662282820759!5m2!1sen!2str" width="90%" height="450" style="border:0; margin-left: 5%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </footer>
+  </body>
+</html>
