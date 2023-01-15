@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            margin: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            font-size: 22px;
+            background-color: #EEB94E;
+            padding: 0px 20px;
+            position: relative;
+        }
+        nav a{
+            text-decoration: none;
+            align-self: center;
+            color: #fff;
+            padding: 21px;
+            
+        }
+        .navigation{
+            list-style: none;
+            display: flex;
+         
+        }
+        .navigation a{
+            padding: 16px;
+            display: block;
+        }
+        .navigation a:hover{
+            background-color: rgb(233, 174, 61);
+        }
+        .navigation li:last-child{
+            display: none;
+        }
+
+        @media (max-width:600px) {
+            nav{
+                flex-direction: column;
+            }
+
+            .navigation{
+                flex-direction: column;
+                
+            }
+            .navigation a{
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+             
+            .navigation li:last-child{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        .responsive .navigation li:not(:last-child){
+            display: none;
+        }
+       
+        
+            
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <nav class="responsive">
+        <a href="#">Logo</a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="">
+                <i class="fa fa-bars" style="font-size:24px"></i>
+            </a></li>
+        </ul>
+        
+    </nav>
+    
+</body>
+</html>
