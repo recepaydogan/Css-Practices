@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+@import url(utils.css);
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  line-height: 1.6;
+  color: #333;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Nav bar part  */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark);
+  position: fixed;
+  color: #fff;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  padding: 0 3rem;
+  opacity: 0.8;
+}
+.nav-bar a {
+  color: #fff;
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar a:hover {
+  border-bottom: 2px solid var(--warning);
+}
+.nav-bar .brand {
+  font-weight: 400;
+}
+.nav-bar h1 {
+  font-size: 3rem;
+}
+.nav-bar span {
+  color: var(--warning);
+}
+
+/* Content part */
+.main-header {
+  background: url("../img/bg-1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.main-header.blog{
+  background: url("../img/FVp3HQOVsAAyqxD.jpeg");
+}
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.content h1 {
+  font-size: 5.5rem;
+}
+.content p {
+  font-size: 2.3rem;
+  margin: 3rem 0 2rem;
+  max-width: 60rem;
+}
+.main-header::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.main-header * {
+  z-index: 999;
+}
+
+/* icons */
+
+.icon {
+  padding: 30px;
+}
+.icon i {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+.icon h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* About part */
+#about {
+  color: #fff;
+}
+
+/* Gallery Part */
+#gallery img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Footer Part */
+.footer a{
+  color: var(--danger);
+  margin-right: 8px;
+ 
+}
+.footer a:hover{
+  opacity: 0.8;
+}
+
+/* For Mobile */
+@media(max-width:768px){
+  html{
+    font-size: 8px;
+  }
+  .nav-bar{
+    flex-direction: column;
+    padding: 15px 0;
+    height: 100px;
+   
+  }
+
+  .teams img,
+  .rooms img{
+    width: 70%;
+  }
+  #rooms .cards{
+    width: 100%;
+  }
+  
+  
+}
+
