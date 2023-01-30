@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style></style>
+  <body class="h-100 d-flex flex-column vh-100">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark sticky-top">
+      <div class="container">
+        <a href="" class="navbar-brand text-light"
+          ><span class="navbar-dark fa fa-home" aria-hidden="true"></span
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobile"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-light"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="blogs.html" class="nav-link text-light"> Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a href="contacts.html" class="nav-link text-light">Contact</a>
+            </li>
+          </ul>
+          <form action="" class="d-flex">
+            <input class="form-control me-1" type="text" placeholder="Search" />
+            <button class="btn btn-dark">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container my-5">
+        <h2 class="my-3">Contact us</h2>
+        <div class="row g-2">
+          <div class="rounded col-md-6">
+            <div class="card my-1">
+              <div class="card-body bg-dark">
+                <div class="alert alert-danger mb-3">
+                  Please fill out the form.
+                </div>
+                <form class="was-validated" novalidate>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="email" id="" class="form-label"> Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        required
+                      />
+                      <div class="valid-feedback">Defined</div>
+                      <div class="invalid-feedback">
+                        Please fill out the form
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="name" id="" class="form-label"> Name</label>
+                      <input type="text" id="name" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <label for="phone" id="" class="form-label"> Phone</label>
+                      <input type="tel" id="phone" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <label for="subject" id="" class="form-label">
+                        Subject</label
+                      >
+                      <input type="text" id="subject" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <label for="message" id="" class="form-label">
+                        Message</label
+                      >
+                      <textarea
+                        name="message"
+                        id="message"
+                        class="form-control"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <div class="col-md-12 mb-3 d-md-flex">
+                      <button class="btn btn-outline-light w-100" type="submit">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pt-1">
+            <iframe
+              id="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12621.15933579173!2d29.1015639459096!3d37.7363441536734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c64cd2bfffffff%3A0x7c21102ab89254ac!2sPamukkale%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1674474153538!5m2!1str!2str"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-auto">
+      <div class="center py-5 bg-dark">
+        <div class="text-center text-light">All Right Deserverd @2025</div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
