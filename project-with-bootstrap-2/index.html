@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome...</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .brand-text {
+      font-family: "Italiana", serif;
+      font-weight: 400;
+      letter-spacing: 5px;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #252525 !important;
+      color: #fff;
+    }
+
+    .accordion-button:focus {
+      z-index: 3;
+      border-color: none !important;
+      outline: 0;
+      box-shadow: none;
+    }
+    .accordion-button {
+      font-size: 1.25rem;
+    }
+
+    .accordion-item {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    .accordion h3 {
+      margin: 20px 0px;
+    }
+    .list-group-item {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+    #content,
+    .content-2,
+    .image-gallery {
+      background-color: #fefcf3;
+    }
+    .img-gallery-div {
+      overflow: hidden;
+      padding: 0 0 !important;
+
+      flex-grow: 1;
+    }
+    .col-lg-4 .img-gallery {
+      transition: transform 0.2s ease-in;
+    }
+    .col-lg-4 .img-gallery:hover {
+      transform: scale(1.2);
+    }
+    .fa-instagram:hover {
+      color: #f56040;
+    }
+    .fa-facebook:hover {
+      color: #0165e1;
+    }
+    .fa-twitter:hover {
+      color: #1da1f2;
+    }
+  </style>
+  <body>
+    <main>
+      <!-- BANNER -->
+      <section class="banner" id="home">
+        <!-- NAVBAR -->
+        <nav
+          class="navbar z-3 position-fixed w-100 bg-opacity-25 navbar-expand-md bg-dark"
+        >
+          <div class="container">
+            <a class="navbar-brand ms-5" href="#"
+              ><span class="brand-text text-light fs-2">GLOBAL EXPLORE</span></a
+            >
+            <button
+              class="navbar-toggler bg-light"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#navbar-offcanvas"
+              aria-controls="navbar-offcanvas"
+              aria-expanded="false"
+              aria-label="offcanvasScrollingLabel"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="offcanvas bg-dark offcanvas-end"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+              tabindex="-1"
+              id="navbar-offcanvas"
+              aria-labelledby="offcanvasScrollingLabel"
+            >
+              <div class="offcanvas-header">
+                <h5
+                  class="offcanvas-title text-light"
+                  id="offcanvasScrollingLabel"
+                >
+                  Links
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close bg-light"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body justify-content-end">
+                <div
+                  class="d-flex justify-content-center"
+                  id="navbarNavAltMarkup"
+                >
+                  <div class="navbar-nav fw-light fs-4">
+                    <div class="text-center">
+                      <a
+                        class="nav-link text-light"
+                        aria-current="page"
+                        href="#home"
+                        >Home</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <a class="nav-link ms-lg-2 text-light" href="#content"
+                        >Guide</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <a class="nav-link ms-lg-2 text-light" href="#contact"
+                        >Contact</a
+                      >
+                    </div>
+                    <div class="text-center">
+                      <a class="nav-link ms-lg-2 text-light"></a>
+                    </div>
+                    <div class="text-center">
+                      <button
+                        class="rounded-circle mt-2 text-center text-white bg-transparent border-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#sign-modal"
+                        type="button"
+                      >
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- MODAL-SİGN -->
+        <div class="modal fade" tabindex="-1" id="sign-modal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title ms-auto">Login</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="px-4 py-3">
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleDropdownFormEmail1"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormPassword1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleDropdownFormPassword1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="dropdownCheck"
+                      />
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-outline-dark">
+                    Sign in
+                  </button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn me-5 btn-outline-dark"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sign-modal-register"
+                >
+                  Do you have an account?
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-dark"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-outline-dark">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MODAL-REGİSTER -->
+        <div
+          class="modal fade"
+          tabindex="-1"
+          aria-hidden="true"
+          id="sign-modal-register"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title ms-auto">Create an Account</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="rounded col-md-12">
+                  <div class="card my-1">
+                    <div class="card-body bg-dark">
+                      <div class="alert alert-danger mb-3">
+                        Please fill out the form.
+                      </div>
+                      <form class="was-validated" novalidate>
+                        <div class="row">
+                          <div class="col-md-6 mb-3 text-light">
+                            <label
+                              for="email"
+                              id=""
+                              class="form-label text-light"
+                            >
+                              Email</label
+                            >
+                            <input
+                              type="email"
+                              id="email"
+                              class="form-control"
+                              required
+                            />
+                            <div class="valid-feedback">Defined</div>
+                            <div class="invalid-feedback">
+                              Please fill out the form
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label
+                              for="name"
+                              id=""
+                              class="form-label text-light"
+                            >
+                              Name</label
+                            >
+                            <input type="text" id="name" class="form-control" />
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <label
+                              for="phone"
+                              id=""
+                              class="form-label text-light"
+                            >
+                              Phone</label
+                            >
+                            <input type="tel" id="phone" class="form-control" />
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <label
+                              for="subject"
+                              id=""
+                              class="form-label text-light"
+                            >
+                              Subject</label
+                            >
+                            <input
+                              type="text"
+                              id="subject"
+                              class="form-control"
+                            />
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <label
+                              for="message"
+                              id=""
+                              class="form-label text-light"
+                            >
+                              Message</label
+                            >
+                            <textarea
+                              name="message"
+                              id="message"
+                              class="form-control"
+                              rows="3"
+                            ></textarea>
+                          </div>
+                          <div class="col-md-12 mb-3 d-md-flex">
+                            <button
+                              class="btn btn-outline-light w-100"
+                              type="submit"
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- CAROUSEL PART -->
+        <div
+          id="carousel-header "
+          class="carousel z-n1 vh-100 position-relative slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3500">
+              <img
+                src="https://i.pinimg.com/originals/45/68/cc/4568cc696a85c39dacb4b37eaab00555.jpg"
+                class="d-block object-fit-cover opacity-10 w-100 vh-100"
+                alt="..."
+              />
+              <div
+                class="carousel-caption text-dark bottom-50 d-none d-md-block"
+              >
+                <h2 class="display-4">Your Best Travel Guide</h2>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+              <img
+                src=" https://travelersq.com/wp-content/uploads/2021/09/9_2-International-Destinations-That-Are-Open-and-Ready-For-You-to-Visit.jpg "
+                class="d-block object-fit-cover opacity-75 w-100 vh-100"
+                alt="..."
+              />
+              <div
+                class="carousel-caption text-dark bottom-50 d-none d-md-block"
+              >
+                <h2 class="display-4">Everything You Need to Travel Is Here</h2>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+              <img
+                src="https://www.jordan-road.com/wp-content/uploads/2020/01/travel-planning.jpg"
+                class="d-block object-fit-cover object opacity-75 w-100 vh-100"
+                alt="..."
+              />
+              <div class="carousel-caption bottom-50 d-none d-md-block">
+                <h2 class="display-4">Set a Route And Start Exploring</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTENT OF CITIES WITH ACCORDIONS -->
+      <section class="content-1 py-5 bg-gradient" id="content">
+        <div class="container">
+          <div class="row">
+            <div class="section-header">
+              <h2 class="display-5 text-center my-5 fw-light">
+                How to Visit the Most Beautiful Cities in the World
+              </h2>
+            </div>
+            <!--  FIRST ACCORDION -->
+            <div class="accordion col-sm-6 col-md-4" id="accordion-countries">
+              <h3 class="text-center fst-italic fw-light">Europe</h3>
+              <!--  France -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#France"
+                    aria-expanded="true"
+                    aria-controls="France"
+                  >
+                    France
+                  </button>
+                </h2>
+                <div
+                  id="France"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-countries"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/France.png"
+                        class="card-img-top"
+                        alt="TR"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">France</h5>
+                        <p class="card-text">
+                          Travelling around France is easy. Restaurants and
+                          hotels proliferate, many of them relatively
+                          inexpensive when compared with other developed Western
+                          European countries. Train services are admirably
+                          efficient, as is the road network – especially the
+                          (toll-paying) autoroutes – and cyclists are much
+                          admired and encouraged. Information is highly
+                          organized and available from tourist offices across
+                          the country, as well as from specialist organizations
+                          for walkers, cyclists, campers and so on.
+                        </p>
+                      </div>
+                      <ul class="list-group mb-3 list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Paris</li>
+                        <li class="list-group-item">Bordeaux</li>
+                        <li class="list-group-item">Nice</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-france/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- POLAND -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Poland"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Poland
+                  </button>
+                </h2>
+                <div
+                  id="Poland"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-countries"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/poland.png"
+                        class="card-img-top"
+                        alt="Poland"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Poland</h5>
+                        <p class="card-text">
+                          Poland is a beautiful country to visit in any season.
+                          In winter, you can see amazing wiews in cities covered
+                          with snow. Also, in spring, You will be surprized when
+                          you see the colorful buildings and very old churches.
+                          Plus, You should visit these cities to have best
+                          experiences.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Warsaw</li>
+                        <li class="list-group-item">Wroclaw</li>
+                        <li class="list-group-item">Krakow</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-places-to-visit-in-poland/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ITALY -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Italy"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Italy
+                  </button>
+                </h2>
+                <div
+                  id="Italy"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-countries"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/italy.png"
+                        class="card-img-top"
+                        alt="Italy"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Italy</h5>
+                        <p class="card-text">
+                          Figuring out where to go when you visit Italy is not
+                          that hard nowadays. From ancient hilltop towns to
+                          modern bustling cities, dramatic mountain landscapes
+                          to sweeping coastal scenery, each point of Italy
+                          delivers something different. hHere is our top 3 list
+                          of the cities to visit first
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Venice</li>
+                        <li class="list-group-item">Rome</li>
+                        <li class="list-group-item">Verona</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.walksofitaly.com/blog/travel-tips/beautiful-places-in-italy"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SPAIN -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Spain"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Spain
+                  </button>
+                </h2>
+                <div
+                  id="Spain"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-countries"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/spain.png"
+                        class="card-img-top"
+                        alt="Spain"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Spain</h5>
+                        <p class="card-text">
+                          Spain is a surprise to those who have the image of
+                          having to fight for towel space at one of its crowded
+                          beaches or sipping sangria while watching a bull fight
+                          or flamenco. From the ancient monuments left by the
+                          Romans and Moors, the medieval castles of the
+                          interior, the white villages in inland Andalucía or
+                          the vibrant cities of Barcelona and Madrid, there is a
+                          great mixture of cultural attractions in Spain.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Madrid</li>
+                        <li class="list-group-item">Barcelona</li>
+                        <li class="list-group-item">Seville</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/tourist-attractions-in-spain/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  SECOND ACCORDION -->
+            <div class="accordion col-sm-6 col-md-4" id="accordion-countries-2">
+              <h3 class="text-center fst-italic fw-light">America</h3>
+              <!--  ARGENTINA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="fw-light accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Argentina"
+                    aria-expanded="true"
+                    aria-controls="Argentina"
+                  >
+                    Argentina
+                  </button>
+                </h2>
+                <div
+                  id="Argentina"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-countries-2"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Argentina.jpeg"
+                        class="card-img-top"
+                        alt="ARGENTINA"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Argentina</h5>
+                        <p class="card-text">
+                          Argentina is a large country in the southern part of
+                          South America. It offers a great diversity of climates
+                          and landscapes from jungles in the north, great grass
+                          plains in the center and frozen mountains in the
+                          south. Like its neighbor, Brazil, Argentina is a
+                          melting pot of various cultural backgrounds.
+                        </p>
+                      </div>
+                      <ul class="list-group mb-3 list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Buenos Aires</li>
+                        <li class="list-group-item">Mendoza</li>
+                        <li class="list-group-item">Ushuaia</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-argentina/ "
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- BRAZIL -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button fw-light fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Brazil"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Brazil
+                  </button>
+                </h2>
+                <div
+                  id="Brazil"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-countries-2"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Brazil.jpg"
+                        class="card-img-top"
+                        alt="Brazil"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Brazil</h5>
+                        <p class="card-text">
+                          Dominating the landmass of South America, Brazil is a
+                          huge country that is home to a diverse population.
+                          Samba echoes through the streets of its cities at
+                          carnival time, while fanatic football fans scream
+                          themselves hoarse in the nation´s stadiums. With some
+                          of the most beautiful beaches in the world and a rich
+                          cultural heritage, the best cities in Brazil have an
+                          endless array of delights that will astound and entice
+                          visitors to its shores.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Rio de Janeiro</li>
+                        <li class="list-group-item">Florianopolis</li>
+                        <li class="list-group-item">Salvador</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-brazil/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- THE USA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button fw-light fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#USA"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    The USA
+                  </button>
+                </h2>
+                <div
+                  id="USA"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-countries-2"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/USA.jpg"
+                        class="card-img-top"
+                        alt=" THE USA"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Unidet States Of America</h5>
+                        <p class="card-text">
+                          From the soaring skyscrapers of New York City to the
+                          dramatic mesas of Arizona, the United States of
+                          America is a place of staggering beauty and
+                          extraordinary diversity. Nothing prepares you for your
+                          first glimpse of Manhattan’s iconic skyline, the
+                          yawning expanses of the Grand Canyon or the neon-lit
+                          excesses of Las Vegas, just some of the country's many
+                          highlights.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">New York</li>
+                        <li class="list-group-item">Miami</li>
+                        <li class="list-group-item">Los Angeles</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-places-to-visit-in-usa/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CANADA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Canada"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Canada
+                  </button>
+                </h2>
+                <div
+                  id="Canada"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-countries-2"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Canada.gif"
+                        class="card-img-top"
+                        alt="Canada"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Canada</h5>
+                        <p class="card-text">
+                          From skiing and snowboarding to kayaking and canoeing,
+                          to spotting grizzly bears and the Northern Lights,
+                          there are many things to see and do in Canada. Add in
+                          metropolitan cities like Montreal with its shops and
+                          exciting nightlife, and Canada has something for
+                          everyone.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Toronto</li>
+                        <li class="list-group-item">Vancouver</li>
+                        <li class="list-group-item">Montreals</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://wowtravel.me/what-is-the-most-visited-city-in-canada/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- THIRD ACCORDİON -->
+            <div class="accordion col-sm-6 col-md-4" id="accordion-countries-3">
+              <h3 class="text-center fst-italic fw-light">Africa</h3>
+              <!--  MOROCCO -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Morocco"
+                    aria-expanded="true"
+                    aria-controls="Morocco"
+                  >
+                    Morocco
+                  </button>
+                </h2>
+                <div
+                  id="Morocco"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-countries-3"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Morocco.jpg"
+                        class="card-img-top"
+                        alt="MOROCCO"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Morocco</h5>
+                        <p class="card-text">
+                          For Western visitors, Morocco holds an immediate and
+                          enduring fascination. Though just an hour’s ride on
+                          the ferry from Spain, it seems very far from Europe,
+                          with a culture that is almost wholly unfamiliar.
+                          Travel to Morocco and you will uncover a country of
+                          arid deserts, spice-laden souks, and a melting pot of
+                          Berber and Arabian cultures.
+                        </p>
+                      </div>
+                      <ul class="list-group mb-3 list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Marrakech</li>
+                        <li class="list-group-item">Fez</li>
+                        <li class="list-group-item">Ouarzazate</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-morocco/ "
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- EGYPT -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Egypt"
+                    aria-expanded="false"
+                    aria-controls="Egypt"
+                  >
+                    Egypt
+                  </button>
+                </h2>
+                <div
+                  id="Egypt"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-countries-3"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Egypt.png"
+                        class="card-img-top"
+                        alt="Egypt"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Egypt</h5>
+                        <p class="card-text">
+                          Egypt is the oldest tourist destination on earth.
+                          Ancient Greeks and Romans started the trend, coming to
+                          goggle at the cyclopean scale of the Pyramids and the
+                          Colossi of Thebes. During colonial times, Napoleon and
+                          the British looted Egypt’s treasures to fill their
+                          national museums, sparking off a trickle of Grand
+                          Tourists that eventually became a flood of travellers,
+                          taken on Nile cruises and Egyptological lectures by
+                          the enterprising Thomas Cook..
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Cairo</li>
+                        <li class="list-group-item">Giza</li>
+                        <li class="list-group-item">Luxor</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-egypt/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SOUTH AFRICA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#SouthAfrica"
+                    aria-expanded="false"
+                    aria-controls="SouthAfrica"
+                  >
+                    South Africa
+                  </button>
+                </h2>
+                <div
+                  id="SouthAfrica"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-countries-3"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/SouthAfrica.png"
+                        class="card-img-top"
+                        alt=" South Africa"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">South Africa</h5>
+                        <p class="card-text">
+                          South Africa is a large, diverse and incredibly
+                          beautiful country. It varies from the picturesque
+                          Garden Route towns of the Western Cape to the raw
+                          subtropical coast of northern KwaZulu-Natal. The vast
+                          Karoo semi-desert stretches across its centre, while
+                          one of Africa’s premier safari destinations, Kruger
+                          National Park, sprawls along the northeast border. The
+                          big cities attract immigrants from across the
+                          continent, making them great, bubbling cultural
+                          crucibles. Read our South Africa guide for everything
+                          you need to know before you go.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Cape Town</li>
+                        <li class="list-group-item">Durban</li>
+                        <li class="list-group-item">Johannesburg</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-south-africa/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CANADA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Tunisia"
+                    aria-expanded="false"
+                    aria-controls="Tunisia"
+                  >
+                    Tunisia
+                  </button>
+                </h2>
+                <div
+                  id="Tunisia"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-countries-3"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Tunisia.webp"
+                        class="card-img-top"
+                        alt="Tunisia"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Tunisia</h5>
+                        <p class="card-text">
+                          Tunisia is a country in Northern Africa that has a
+                          Mediterranean Sea coastline in the very centre of
+                          Mediterranean Africa. Tunisia lies immediately to the
+                          south of Italy and Malta. Libya borders Tunisia to the
+                          south-east, while Algeria lies to the west. Tunisia is
+                          the smallest of the North African countries.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Tunis</li>
+                        <li class="list-group-item">Sousse</li>
+                        <li class="list-group-item">Bizerte</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.adequatetravel.com/blog/best-cities-to-visit-in-tunisia/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FOURTH ACCORDION -->
+            <div class="accordion col-sm-6 col-md-4" id="accordion-countries-4">
+              <h3 class="text-center fst-italic fw-light">Asia</h3>
+              <!--  CHINA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#China"
+                    aria-expanded="true"
+                    aria-controls="China"
+                  >
+                    China
+                  </button>
+                </h2>
+                <div
+                  id="China"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-countries-4"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/China.jpg"
+                        class="card-img-top"
+                        alt="China"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">China</h5>
+                        <p class="card-text">
+                          Splendidly diverse in its geographic, ethnic, culinary
+                          and social make-up, China is a nation on the march.
+                          Developing at a rate unmatched in human history,
+                          already huge cities are adding sprawling suburbs and
+                          cutting-edge architecture on a day-by-day basis, even
+                          as an ever-expanding web of high-speed rail ties the
+                          country together.
+                        </p>
+                      </div>
+                      <ul class="list-group mb-3 list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Beijing</li>
+                        <li class="list-group-item">Shanghai</li>
+                        <li class="list-group-item">Chengdu</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-china/ "
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- MALAYSIA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Malaysia"
+                    aria-expanded="false"
+                    aria-controls="Malaysia"
+                  >
+                    Malaysia
+                  </button>
+                </h2>
+                <div
+                  id="Malaysia"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-countries-4"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Malaysia.jpg"
+                        class="card-img-top"
+                        alt="Malaysia"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Malaysia</h5>
+                        <p class="card-text">
+                          Populated by a blend of Malays, Chinese, Indians and
+                          indigenous groups, Malaysia boasts a rich cultural
+                          heritage, from a huge variety of annual festivals and
+                          wonderful cuisines, to traditional architecture and
+                          rural crafts. There’s astonishing natural beauty to
+                          take in too, including gorgeous beaches and some of
+                          the world’s oldest tropical rainforest, much of which
+                          is surprisingly accessible. Malaysia’s national parks
+                          are superb for trekking and wildlife-watching, and
+                          sometimes for cave exploration and river rafting.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Kuala Lumpur</li>
+                        <li class="list-group-item">George Town</li>
+                        <li class="list-group-item">Malacca</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-malaysia/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- THAILAND -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Thailand"
+                    aria-expanded="false"
+                    aria-controls="Thailand"
+                  >
+                    Thailand
+                  </button>
+                </h2>
+                <div
+                  id="Thailand"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-countries-4"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Thailand.png"
+                        class="card-img-top"
+                        alt="Thailand"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Thailand</h5>
+                        <p class="card-text">
+                          With 16 million foreigners flying into the country
+                          each year, Thailand is Asia’s primary travel
+                          destination and offers a host of places to visit.
+                          Travel to Thailand and you’ll find that despite this
+                          vast influx of visitors, it’s cultural integrity
+                          remains largely undamaged. Thailand is a country that
+                          cleverly avoided colonisation has been able to absorb
+                          Western influences while maintaining its own rich
+                          heritage.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Bangkok</li>
+                        <li class="list-group-item">Chiang Mai</li>
+                        <li class="list-group-item">Ayutthaya</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-thailand/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  SOUTH KOREA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#SouthKorea"
+                    aria-expanded="false"
+                    aria-controls="SouthKorea"
+                  >
+                    South Korea
+                  </button>
+                </h2>
+                <div
+                  id="SouthKorea"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-countries-4"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/SouthKorea.png"
+                        class="card-img-top"
+                        alt="Tunisia"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">South Korea</h5>
+                        <p class="card-text">
+                          The Korean peninsula is a tantalizingly unexplored
+                          slice of East Asia – a pine-clad land of mountains,
+                          misty archipelagos and rice paddies of emerald green,
+                          studded with urban pockets of incomparable joie de
+                          vivre. While its troubled history has made Korea’s
+                          very existence nothing short of miraculous, amazingly
+                          its traditions and customs have largely survived
+                          intact – and for visitors, this highly distinctive
+                          culture is an absolute joy to dive into.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Seoul</li>
+                        <li class="list-group-item">Busan</li>
+                        <li class="list-group-item">Seogwipo</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-south-korea/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- AUSTRALIA -->
+            <div
+              class="accordion ms-auto col-sm-6 col-md-4"
+              id="accordion-countries-5"
+            >
+              <h3 class="text-center fst-italic fw-light">Australia</h3>
+              <!--  Australia -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Australia"
+                    aria-expanded="true"
+                    aria-controls="Australia"
+                  >
+                    Australia
+                  </button>
+                </h2>
+                <div
+                  id="Australia"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-countries-5"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Australia.webp"
+                        class="card-img-top"
+                        alt="Australia"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Australia</h5>
+                        <p class="card-text">
+                          More than most other countries, Australia seizes the
+                          imagination. For many visitors its name is synonymous
+                          with endless summers where the living is easy. This is
+                          where the adventures are as vast as the horizons and
+                          the jokes flow as freely as the beer – a country of
+                          can-do spirit and laidback friendliness. No wonder
+                          Australians call theirs the Lucky Country.
+                        </p>
+                      </div>
+                      <ul class="list-group mb-3 list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Sydney</li>
+                        <li class="list-group-item">Melbourne</li>
+                        <li class="list-group-item">Cairns</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-australia/ "
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- NEW ZEALAND -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#NewZealand"
+                    aria-expanded="false"
+                    aria-controls="NewZealand"
+                  >
+                    New Zealand
+                  </button>
+                </h2>
+                <div
+                  id="NewZealand"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-countries-5"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/NewZealand.webp"
+                        class="card-img-top"
+                        alt="New Zealand"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">New Zealand</h5>
+                        <p class="card-text">
+                          Kiwis – the people, not the emblematic flightless bird
+                          – can’t believe their luck at being born in what they
+                          call “Godzone” (God’s own country). Year after year,
+                          travellers list New Zealand in the top ten of places
+                          they’d like to visit – and you never meet anyone who
+                          has been and didn’t love the place. And what’s not to
+                          like?
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Fiordland</li>
+                        <li class="list-group-item">Tongariro National Park</li>
+                        <li class="list-group-item">Queenstown</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-places-to-visit-in-new-zealand/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FIJI -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Fiji"
+                    aria-expanded="false"
+                    aria-controls="Fiji"
+                  >
+                    Fiji
+                  </button>
+                </h2>
+                <div
+                  id="Fiji"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-countries-5"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Fiji.jpeg"
+                        class="card-img-top"
+                        alt="Thailand"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fiji</h5>
+                        <p class="card-text">
+                          Sun-drenched beaches, turquoise lagoons, swaying palm
+                          trees – Fiji supplies all the classic images of
+                          paradise. No wonder, then, that every year thousands
+                          of travellers come to this South Pacific archipelago
+                          for the ultimate island escape. With over three
+                          hundred islands to choose from, Fiji is an amazingly
+                          versatile destination. Whether you’re after a luxury
+                          honeymoon retreat, a lively backpacker island or a
+                          family-friendly resort you won’t be disappointed.
+                          You’ll also find a warm, hospitable people, an
+                          intriguing blend of Melanesians, Polynesians and
+                          Indians.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item">Suva</li>
+                        <li class="list-group-item">Lautoka</li>
+                        <li class="list-group-item">Nadi</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.adequatetravel.com/blog/5-best-cities-in-fiji-to-visit-major-cities-in-fiji/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  INDONESİA -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button fw-light collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Indonesia"
+                    aria-expanded="false"
+                    aria-controls="Indonesia"
+                  >
+                    Indonesia
+                  </button>
+                </h2>
+                <div
+                  id="Indonesia"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-countries-5"
+                >
+                  <div class="accordion-body">
+                    <div class="card w-100">
+                      <img
+                        src="images/Indonesia.png"
+                        class="card-img-top"
+                        alt="Indonesia"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Indonesia</h5>
+                        <p class="card-text">
+                          With 17,000 Indonesian islands scattered between the
+                          Asian mainland and Australia, the archipelago has more
+                          than its share of natural wonders and curious
+                          wildlife. You’ll discover everything from the scorched
+                          landscape of Komodo to the lush volcanic slopes of
+                          Flores and the shimmering reefs of the Gili Islands.
+                          Spectacular crater lakes change colour before your
+                          eyes, while sparring dragons could be straight from a
+                          scene of Jurassic Park.
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <h4 class="text-muted text-center my-2">
+                          Best Cities to Visit First
+                        </h4>
+                        <li class="list-group-item fs-5">Yogyakarta</li>
+                        <li class="list-group-item">Ubud</li>
+                        <li class="list-group-item">Kuta</li>
+                      </ul>
+                      <a
+                        target="_blank"
+                        href="https://www.touropia.com/best-cities-to-visit-in-indonesia/"
+                        class="btn w-75 my-3 mx-auto btn-primary"
+                        >Go to the Detailed Tour Guide</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOST VISITED COUNTRIES -->
+      <section class="content-2 py-5 bg-dark">
+        <div class="container px-5">
+          <div class="section-header">
+            <h2 class="display-5 mb-5 text-center text-light fw-light">
+              The Most Visited Cities In The World in 2022
+            </h2>
+          </div>
+          <table
+            class="table table-hover table-group-divider table-bordered table table-dark table-striped text-center"
+          >
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">City</th>
+                <th scope="col">Country</th>
+                <th scope="col">Visitors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Bangkok</td>
+                <td>Thailand</td>
+                <td>23 million</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Paris</td>
+                <td>France</td>
+                <td>19 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>London</td>
+                <td>THE UK</td>
+                <td>19 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Dubai</td>
+                <td>United Arab Emirates</td>
+                <td>16 million</td>
+              </tr>
+
+              <tr>
+                <th scope="row">5</th>
+                <td>Singapore</td>
+                <td>Singapore</td>
+                <td>15 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Kuala Lumpur</td>
+                <td>Malaysia</td>
+                <td>14 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>New York</td>
+                <td>THE USA</td>
+                <td>14 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Istanbul</td>
+                <td>Turkey</td>
+                <td>13 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Tokyo</td>
+                <td>Japan</td>
+                <td>13 Million</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Antalya</td>
+                <td>Turkey</td>
+                <td>12 Million</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!--  7 WONDERS OF THE WORLD -->
+      <section class="content-3 py-5">
+        <div class="container-lg">
+          <div class="section-header">
+            <h2 class="display-5 mb-5 text-center text-dark fw-light">
+              The New 7 Wonders Of The World
+            </h2>
+          </div>
+          <div class="row">
+            <!-- CARD-1 -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://infos10.com/wp-content/uploads/2021/02/taj-mahal-1030894_1280-1024x681.jpg"
+                class="card-img-top pt-1"
+                alt="Taj Mahal"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Taj Mahal</h5>
+                <p class="card-text">
+                  The Taj Mahal is an ivory-white marble mausoleum on the
+                  southern bank of the Yamuna River in the Indian city of Agra.
+                  It was built by the Mughal Emperor Shah Jahan in 1632 for the
+                  tomb of his favorite wife, Mumtaz Mahal. It also has the tomb
+                  of Shah Jahan himself. The mausoleum is the centerpiece of the
+                  17-hectare complex, which includes a mosque and a guest house,
+                  and is set in formal gardens bounded on three sides by a
+                  formal wall. The construction project employed some 20,000
+                  artisans under the guidance of a board of architects led by
+                  the court architects for the emperor Ustad Ahmad Lahori. Taj
+                  Mahal is one of the new 7 wonders of the world by 2023.
+                </p>
+              </div>
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> India
+              </div>
+            </div>
+            <!-- CARD-2 -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://infos10.com/wp-content/uploads/2021/02/brazil-4809011_640.jpg"
+                class="card-img-top pt-1"
+                alt="Christ the Redeemer"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Christ the Redeemer</h5>
+                <p class="card-text">
+                  Christ the Redeemer is a Christ deco statue in Rio de Janeiro,
+                  Brazil, created by French sculptor Paul Landowski and by
+                  Brazilian engineer Heiter da Silva Costa in collaboration with
+                  French engineer Albert Cacot. Romanian sculptor Gheoghe
+                  Leonida fashioned the face. Built between 1922 and 1931, the
+                  statue is 30 meters high, except for its 8-meter (26 ft)
+                  pedestal. The weapon spans 28 meters. Christ the Redeemer is
+                  one of the new seven wonders of the world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> Brazil
+              </div>
+            </div>
+            <!-- CARD-3 -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://avatars.mds.yandex.net/i?id=ada6f2c74cf3754b45f9d72893824b35655aa6d9-8259609-images-thumbs&n=13"
+                class="card-img-top pt-1"
+                alt="Machu Picchu"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Machu Picchu</h5>
+                <p class="card-text">
+                  Christ the Redeemer is a Christ deco statue in Rio de Janeiro,
+                  Brazil, created by French sculptor Paul Landowski and by
+                  Brazilian engineer Heiter da Silva Costa in collaboration with
+                  French engineer Albert Cacot. Romanian sculptor Gheoghe
+                  Leonida fashioned the face. Built between 1922 and 1931, the
+                  statue is 30 meters high, except for its 8-meter (26 ft)
+                  pedestal. The weapon spans 28 meters. Christ the Redeemer is
+                  one of the new seven wonders of the world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> Peru
+              </div>
+            </div>
+            <!-- CARD-4 -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://infos10.com/wp-content/uploads/2021/02/chichen-itza-323150_1280-1024x767.jpg"
+                class="card-img-top pt-1"
+                alt="Chichen Itza"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chichen Itza</h5>
+                <p class="card-text">
+                  Chichen Itza was a large pre-Columbian city built by the Mayan
+                  people at the time of the Terminal Classic. The archaeological
+                  site is located in Tinum Municipality, Yucatan State, Mexico.
+                  Chichen Itza was one of the largest Mayan cities and it was
+                  possibly one of the legendary great cities, or Toulon,
+                  referred to in later Mesoamerican literature. The city’s Maya
+                  may have the most diverse population in the world, a factor
+                  that may contribute to the diversity of architectural styles
+                  on the site. Chichen Itza is one of the new 7 wonders of the
+                  world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> Mexico
+              </div>
+            </div>
+            <!-- CARD-5  -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://traveldigg.com/wp-content/uploads/2016/05/Colosseum-Photo-From-Top.jpg"
+                class="card-img-top pt-1"
+                alt="Colosseum"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Colosseum</h5>
+                <p class="card-text">
+                  The Colosseum is an oval amphitheatre in the centre of Rome,
+                  Italy, to the east of the city of Rome and is the largest
+                  ancient amphitheatre to date. It is still the largest
+                  permanent amphitheatre in the world despite its age. Its
+                  construction began in 72 under Emperor Vespasian (r. 69–79 AD)
+                  and was completed in 80 AD under his successor and heir, Titus
+                  (r. 79–81). Further amendments were made during the reign of
+                  the Domitian (r. 81–96). The three emperors who were the
+                  patrons of Kama are known as the Flavian dynasty. And the
+                  amphitheatre was named the Flavian Amphitheater, later for the
+                  association of classicists and archaeologists with their
+                  family name. The Colosseum is one of the new seven wonders of
+                  the world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> Italy
+              </div>
+            </div>
+            <!-- CARD-6 -->
+            <div class="card mt-2 col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://avatars.mds.yandex.net/i?id=661080972c275ad07b166e55ae35020fcd01862e-8274378-images-thumbs&n=13"
+                class="card-img-top pt-1"
+                alt="Wall of China"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Wall of China</h5>
+                <p class="card-text">
+                  The Great Wall of China is a series of fortifications. It was
+                  built across the historic northern borders of ancient Chinese
+                  states and Imperial China as a safeguard against various
+                  nomadic groups from the Eurasian steppe. Many walls were built
+                  as early as the 7th century BCE, with the selective stretch
+                  later joined together by the first emperor of China, Qin Shi
+                  Huang. Qin’s wall is small. Later, many successive dynasties
+                  have built and maintained many parts of the boundary walls.
+                  The most famous sections of the wall were built by the Ming
+                  Dynasty (1368–1644). Great Wall of China is one of the new
+                  seven wonders of the world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span>China
+              </div>
+            </div>
+            <!-- CARD-7 -->
+            <div class="card mt-2 mx-auto col-xl-4 col-md-6 col-sm-12">
+              <img
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6b37a1116788097.606956c9e9dce.jpg"
+                class="card-img-top pt-1"
+                alt="Petra"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Petra</h5>
+                <p class="card-text">
+                  Petra is a historical and archaeological city in southern
+                  Jordan. Petra is located in a basin surrounded by mountains
+                  around Jabal al-Madbah. It forms the eastern coast of the
+                  Arabian Valley which runs from the Dead Sea to the Gulf of
+                  Aqaba. However, archaeological works have only discovered
+                  evidence of a Nabatian presence in the second century BCE, by
+                  which time Petra had become their capital. The Nabataeans were
+                  nomadic Arabs, who invested in Petra’s proximity to trade
+                  routes by establishing it as a major regional trading center.
+                  Petra is one of the new seven wonders of the world by 2023.
+                </p>
+              </div>
+
+              <div class="card-footer fs-5">
+                <span class="fw-bold">Location -</span> Jordan
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  IMAGE GALLERY -->
+      <section class="image-gallery py-5 bg-dark">
+        <div class="container pt-3">
+          <div class="section-header">
+            <h2 class="display-5 text-center mb-5 text-light fw-light">
+              Wiews From All Over The World
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/angkor-wat-cambodia-shutterstock_167952836.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/taj-mahal-india-shutterstock_180918317.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/great-barrier-reef-australia-shutterstock_269208791.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/easter-island-chile-shutterstock_371959831.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/petra-jordan-shutterstock_533333092.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/10/machu-picchu-peru-shutterstock_364973210.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/09/havana-cuba-shutterstock_430027549.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/pyramids-giza-egypt-shutterstock_28525558.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/jerusalem-israel-shutterstock_52600888.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/great-wall-china-shutterstock_324699287.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/itsukushima-shinto-shrine-shutterstock_750032629.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 img-gallery-div">
+              <img
+                class="w-100 img-gallery h-100"
+                src="https://www.roadaffair.com/wp-content/uploads/2017/12/acropolis-athens-greece-shutterstock_523975978.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT -->
+      <section id="contact" class="py-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                class="w-100 h-100"
+                src="images/contact.jpg"
+                alt="Contact Us"
+              />
+            </div>
+            <div class="col-md-6 d-flex">
+              <div class="my-auto">
+                <h2 class="display-5 mb-5 text-center text-dark fw-light">
+                  Contact Us
+                </h2>
+                <p class="text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat, accusamus ad quae laudantium impedit repellendus
+                  cupiditate, dicta illum exercitationem delectus, reiciendis
+                  aspernatur quod. Sequi aliquam ducimus minima officia! Optio
+                  porro voluptate saepe maxime officiis cupiditate id minima,
+                  voluptas sed voluptatem temporibus aliquam enim quo, sequi
+                  quasi obcaecati vel minus repudiandae non inventore nobis
+                  iusto. Molestiae, ullam quas? Eligendi sint repellat atque
+                  corporis, dolore suscipit eveniet ullam quidem repellendus!
+                  Reiciendis ex neque voluptatem voluptatibus! Quam et quibusdam
+                  voluptatibus aperiam dignissimos quo autem. Ut omnis sed
+                  minima animi deserunt nulla eaque soluta iste neque
+                  praesentium perferendis provident, facere earum incidunt. In,
+                  accusamus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="social-links">
+          <div class="d-flex justify-content-center">
+            <span class="fab fa-instagram ps-2 fa-2x"></span>
+            <span class="fab fa-twitter ps-2 fa-2x"></span>
+            <span class="fab fa-facebook ps-2 fa-2x"></span>
+          </div>
+          <div class="d-flex justify-content-center fs-5">
+            <p>all right deserved @2023</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
